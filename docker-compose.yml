@@ -1,0 +1,23 @@
+services:
+  master-bdd:
+    container_name: master-bdd
+    image: mariadb:latest
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: TOOR
+      MARIADB_DATABASE: bddname
+      MARIADB_USER: roger
+      MARIADB_PASSWORD: regor
+    
+  master-back:
+    container_name: master-back
+    image: back-ausecours:latest
+    restart: always
+    depends_on: 
+      - master-bdd
+    ports:
+      - 23000:23000
+    environment:
+      BDD_HOST: master-bdd
+      BDD_PORT: 3306

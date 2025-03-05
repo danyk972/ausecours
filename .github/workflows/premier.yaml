@@ -28,7 +28,7 @@ jobs:
       contents: read
       packages: write
 
-  # Chelouterie:
-  #   needs: [Biderie]
-  #   uses: ./.github/workflow/deploy.yaml
-  #   secrets: inherit
+  Chelouterie:
+    needs: [Biderie]
+    uses: ./.github/workflows/deploy.yaml
+    secrets: inherit

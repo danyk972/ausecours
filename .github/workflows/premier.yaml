@@ -20,13 +20,13 @@ jobs:
       - name: The Second
         run: echo Good Bye
 
-  # Biderie:
-  #   needs: [test2]
-  #   uses: ./.github/workflow/ghcr.yaml
-  #   secrets: inherit
-  #   permissions:
-  #     contents: read
-  #     packages: write
+  Biderie:
+    needs: [test2]
+    uses: ./.github/workflow/ghcr.yaml
+    secrets: inherit
+    permissions:
+      contents: read
+      packages: write
 
   # Chelouterie:
   #   needs: [Biderie]

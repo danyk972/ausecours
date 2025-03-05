@@ -32,3 +32,6 @@ jobs:
     needs: [Biderie]
     uses: ./.github/workflows/deploy.yaml
     secrets: inherit
+    permissions:
+      contents: read
+      packages: write

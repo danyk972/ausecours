@@ -30,6 +30,6 @@ jobs:
 
   Chelouterie:
     needs: [Biderie]
-    uses: ./.github/workflows/deploy.yaml
+    uses: ausecours/.github/workflows/deploy.yaml
     secrets: inherit
     

@@ -1,7 +1,7 @@
 name: Github Package
 
 on:
-  workflow call
+  workflow_call
 
 env:
   REGISTRY: ghcr.io

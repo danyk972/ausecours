@@ -2,16 +2,17 @@ name: Test
 
 on:
   push:
-    - master
-
+    branches:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-     - name: The First
-       run: echo Hello
-
+      - name: The First
+        run: |
+          echo Hello
+          
   test2:
     needs: [test]
     runs-on: ubuntu-latest
@@ -19,16 +20,15 @@ jobs:
       - name: The Second
         run: echo Good Bye
 
-Biderie:
-   needs: [test2]
-   uses : ./.github/workflows/ghcr.yaml
-   secrets: inherit
-   permissions:
-     contents: read
-     packages: write
+  Biderie:
+    needs: [test2]
+    uses: ./.github/workflows/ghcr.yaml
+    secrets: inherit
+    permissions:
+      contents: read
+      packages: write
 
-# Chelouterie:
-#   needs: [Biderie]
-#   uses : ./.github/workflows/deploy.yaml
-#   secrets: inherit
-        
+  Chelouterie:
+    needs: [Biderie]
+    uses: ./.github/workflows/deploy.yaml
+    secrets: inherit

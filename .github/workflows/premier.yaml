@@ -29,11 +29,11 @@ jobs:
           - 3306:3306
         options: --helth-cmd="healthcheck.sh --connect --innodb_initialized" --helth-interval=10s --health-retries=3
 
-        env:
-          BDD_HOST: 127.0.0.1
-          BDD_NAME: test
-          BDD_USER: test
-          BDD_PASS: test
+      env:
+        BDD_HOST: 127.0.0.1
+        BDD_NAME: test
+        BDD_USER: test
+        BDD_PASS: test
 
 
     steps:

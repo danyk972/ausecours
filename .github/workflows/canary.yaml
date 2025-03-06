@@ -7,7 +7,7 @@ jobs:
   create_vm_up_compose:
     runs-on: ubuntu-latest
     env:
-      ResourceGroupName: "micsi24sortitoutseul"
+      ResourceGroupName: "gpe_devops"
       ResourceGroupLocation: "francecentral"
 
     steps:

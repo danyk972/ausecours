@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Data Cnx Check
         run: |
@@ -46,7 +46,7 @@ jobs:
           mysql --host 127.0.0.1 --port 3306 -u root -ptoor -e "SHOW DATABASES"
 
       - name: Setup node 
-        uses: action/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 20.x
 

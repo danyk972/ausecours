@@ -58,7 +58,7 @@ jobs:
 
       - name: Polpulate BDD
         run: |
-          mysql -u root -ptor --host 127.0.0.1 --port 3306 --database test < ./test/insert_test_user.sql
+          mysql -u root -ptoor --host 127.0.0.1 --port 3306 --database test < ./test/insert_test_user.sql
 
       - name: Run all test and coverage
         run: npm run test:cov
